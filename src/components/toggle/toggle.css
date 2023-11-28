@@ -1,0 +1,41 @@
+.toggle-wrapper {
+  width: 40px;
+  height: 20px;
+  border-radius: 20px;
+  border: 1px solid #afc6bd;
+  position: relative;
+  background-color: var(--white);
+  transition: 400ms;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0px 1px 6px 0px #00000026 inset;
+}
+
+.toggle-switch {
+  width: 18px;
+  height: 18px;
+  border-radius: 18px;
+  transform: scale(1.1);
+  position: absolute;
+  left: 0;
+  top: -1px;
+  transition: 300ms ease-out;
+  display: block;
+  border: 1px solid #f2ebdb;
+  background-color: var(--white);
+  box-shadow: 0 0 0 0 rgba(175, 198, 189, 0.1);
+}
+
+.toggle-switch:hover {
+  box-shadow: 0 0 0 5px rgba(175, 198, 189, 0.5);
+}
+
+.toggle-wrapper.active {
+  background-color: var(--green);
+}
+
+.toggle-wrapper.active .toggle-switch {
+  left: calc(100% - 20px);
+  border: 1px solid var(--green);
+}
